@@ -1,0 +1,36 @@
+
+.wrapper {
+	margin:0 auto;
+	width: 960px ;
+}
+
+body {
+	background-color: grey;
+}
+
+.cVid1{
+	
+
+}
+
+#vid1{
+
+	width: 600px;
+	height: 400px;
+	margin-left: 20%;
+}
+
+.cBtn1{
+
+	margin-left: 46%;
+}
+
+.lateralbtn{
+
+	margin-left: 32%;
+}
+
+.audio{
+
+	margin-left: 30%;
+}

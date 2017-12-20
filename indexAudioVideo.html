@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Audio&Video</title>
+
+	<link rel="stylesheet" href="css/audioVideo.css" />
+
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+	<div class="video">
+
+			<div class="cVid1">
+
+				<video id="vid1" controls>
+					<source src="media/vid1.mp4" type="video/mp4">
+				</video>
+					
+					<div class="lateralbtn">
+				<button id="btnEn" onclick="enableControls()">Enable Controls</button>
+				<button id="btnDis" onclick="disableControls()">Disable Controls</button>
+				<button id="btnChe" onclick="checkControls()">Check Controls Status</button>
+					</div>
+				
+			</div>
+
+			<div class="cBtn1">
+				
+				<button id="btn1" onclick="playVid()"  type="button">Iniciar
+				</button>
+
+				<button id="btn2"  onclick="pauseVid()"" type="button">Pausar
+				</button>
+
+			</div>
+
+    </div>
+
+
+	<div class="audio">
+				
+			<div class="cAud1">
+
+				<video id="aud1" controls="" >
+					<source src="media/aud1.mp3" type="audio/mp3">
+				</video>
+				
+			</div>
+
+			<div class="cBtnAud1">
+				
+				<button id="btnAud1" onclick="playAud()"  type="button">Iniciar
+				</button>
+
+				<button id="btnAud2"  onclick="pauseAud()"" type="button">Pausar
+				</button>
+
+			</div>
+
+
+
+
+
+	</div>
+
+
+	</div>
+
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/audioVideo.js"></script>
+</body>
+</html>
