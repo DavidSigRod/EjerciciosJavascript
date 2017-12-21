@@ -18,23 +18,33 @@
 
 				<video id="vid1" controls>
 					<source src="media/vid1.mp4" type="video/mp4">
+					<source src="media/vid1.ogg" type="video/ogg">
+					<source src="media/vid1.webm" type="video/webm">
 				</video>
 					
 					<div class="lateralbtn">
-				<button id="btnEn" onclick="enableControls()">Enable Controls</button>
-				<button id="btnDis" onclick="disableControls()">Disable Controls</button>
-				<button id="btnChe" onclick="checkControls()">Check Controls Status</button>
+				<button id="btnEn" type="button">Enable Controls</button>
+				<button id="btnDis" type="button" >Disable Controls</button>
+				<button id="btnChe" type="button">Check Controls Status</button>
 					</div>
 				
 			</div>
 
 			<div class="cBtn1">
 				
-				<button id="btn1" onclick="playVid()"  type="button">Iniciar
+				<button id="btn1" type="button">Iniciar
 				</button>
 
-				<button id="btn2"  onclick="pauseVid()"" type="button">Pausar
+				<button id="btn2" type="button">Pausar
 				</button>
+
+				<button id="btn3" type="button">Cambiar Video
+				</button>
+
+				<button id="btn4" type="button">Adelantar seg 10
+				</button>
+
+
 
 			</div>
 
@@ -46,17 +56,17 @@
 			<div class="cAud1">
 
 				<video id="aud1" controls="" >
-					<source src="media/aud1.mp3" type="audio/mp3">
+					<source src="media/aud1.mp3" type="audio/mpeg">
 				</video>
 				
 			</div>
 
 			<div class="cBtnAud1">
 				
-				<button id="btnAud1" onclick="playAud()"  type="button">Iniciar
+				<button id="btnAud1" type="button">Iniciar
 				</button>
 
-				<button id="btnAud2"  onclick="pauseAud()"" type="button">Pausar
+				<button id="btnAud2" type="button">Pausar
 				</button>
 
 			</div>
@@ -70,7 +80,7 @@
 
 	</div>
 
-	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/audioVideo.js"></script>
 </body>
 </html>
