@@ -1,0 +1,15 @@
+
+
+#div1, #div2 {
+    float: left;
+    width: 600px;
+    height: 340px;
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+img {
+	max-width: 100%;
+	max-height:  100%;
+}

@@ -1,0 +1,72 @@
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>HandlebarsHelper</title>
+ </head>
+ <body>
+ 	<!-- 
+
+	1) Crer un JSON/Array de 2 empresas (JS).
+	2) Crear funcion RegisterHelper para comprobar en que ciudad estamos (JS).
+	3) Utilizar "each" para correr el array de empresas (Plantilla).
+	4) Añadir la llamada a la función creada  (Plantilla).
+
+
+	Empresa1:
+
+		Nombre
+		Dirección
+		Teléfono
+		¿Eres Madrid?: Si/No.
+
+	Empresa2:
+
+		Nombre
+		Dirección
+		Teléfono
+		¿Eres Madrid?: Si/No.
+
+ -->
+
+
+	<!-- <div id="#resultado"></div>  -->
+
+	<script id="plantilla" type="text/x-handlebars/template">
+		{{#each empresas}}
+		<ul>
+		    <li>
+		    	Nombre: {{nombre}}
+		    </li>
+			
+			{{#checkNombre this}}
+			<li>
+		    	Nombre Empresa: {{nombre}}
+		    </li>
+		 	{{/checkNombre}}
+
+			<li>
+				Ciudad: {{ciudad}}
+			</li>
+		 
+		 	<li>
+		 		Dónde estoy? {{queCiudad telefono}}
+		 	</li>
+
+			<li>
+				Teléfono: {{telefono}}
+			</li>
+		</ul>
+		{{/each}} 
+
+	</script> 
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+ 	<script src="js/handlebars-v4.0.11.js"></script>
+
+ 	<script src="js/scriptHandlebars.js"></script>
+ </body>
+ </html>

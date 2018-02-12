@@ -1,0 +1,108 @@
+<script type ="text/javascript">
+
+	
+		//Array dentro de array
+/*
+		var filas = [];
+		var columnas = [1,2,3];
+		var columnas = [1,2,3];
+		var columnas = [1,2,3];
+
+		filas.push(columnas1); // filas => [[1,2,3]]
+		filas.push(columnas2); // filas => [[1,2,3],[4,5,6]]
+		filas.push(columnas3); // filas => [[1,2,3],[4,5,6],[7,8,9]]
+*/
+
+	/* 
+		data: anything
+		array: []
+		callback: function(argument1, argument2)
+
+	*/
+
+	/*
+
+	function addToArraySync(dato, lista) {
+
+		// Si el array no es un array
+  		if (!Array.isArray(lista)) {
+			console.log("La lista no es un array");
+		}
+		else {
+			lista.push(dato);
+		}
+	}
+
+*/
+
+
+	// Solución con CallBacks:
+
+	function addToArrayCallback(dato, lista, funcionCallback) {
+
+		// Si el array no es un array
+  		if (!Array.isArray(lista)) {
+			funcionCallback(new Error('No existe el array'), null);
+		}
+		else {
+			lista.push(dato);
+			funcionCallback(null, lista);
+		}
+	}
+
+function callBackHam(mensajeError,lista) {
+
+		// Si hay error
+		if (mensajeError !== null) {
+			return console.log(mensajeError);
+		}
+		else {
+  			console.log(lista);
+		}
+	}
+
+
+	var hamburguesa = [];
+
+	addToArrayCallback("pan de abajo", hamburguesa, callBackHam);
+	addToArrayCallback("carne", hamburguesa, callBackHam);
+
+
+
+
+	// Solución con Promesas:
+
+
+
+	function addToArrayPromise(dato, lista, funcionCallback) {
+
+
+		// var promesa = new Promise ( /* una función con 2 parámetros que a su vez son funciones manejadoras (una pa si todo ha ido bien y otra pa si algo ha ido mal))*/
+
+		var promesa = new Promise(function (quitarLaMesa, algohaIdoMal) {
+
+            lista.push(dato);
+            quitarLaMesa(lista);
+           
+    
+		    if (!lista) {
+		      algohaIdoMal('No existe un array');
+		    }
+
+	});
+}
+
+	function pintarHamburguesa() {
+		console.log(hamburguesa);
+	}
+
+	function decirError() {
+		console.log("Error, no se ha podido aumentar la hamburguesa.");
+	}
+
+
+	addToArrayPromise("cebolla", hamburguesa)
+			.then(pintarHamburguesa)
+			.catch(decirError);
+
+</script>

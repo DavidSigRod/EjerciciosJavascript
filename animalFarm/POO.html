@@ -1,0 +1,78 @@
+<script type="text/javascript">
+	
+	function Persona(nombre, edad)
+	{
+		// Propiedades
+		this.nombre = nombre;
+		this.edad = edad;
+
+		// Metodos
+		this.decirNombre = function(){
+			return this.nombre;
+		}
+		// cumplir()
+	}
+
+	var persona1 = new Persona("David", 36);
+	// console.log(persona1.nombre); // David
+	console.log(persona1.decirNombre());  // David
+
+
+	var persona2 = new Persona("Goliat", 578);
+	// console.log(persona2.decirNombre()); //Goliat
+
+	//Cambiar el nombre a Goliat
+	Persona.prototype.cambiarNombre = function(nombre) {
+		this.nombre = nombre;
+	};
+
+	persona2.cambiarNombre("Max Power");
+	console.log(persona2.decirNombre());
+
+	persona1.cambiarNombre("Clark Kent");
+	console.log(persona1.decirNombre());
+
+	// "Yo soy el prototipo de mi hijo"
+	// "Mi padre es mi prototipo"
+
+	// PERSONA
+	// |
+	// |--JEDI = PERSONA.prototype
+	// |--SITH = PERSONA.prototype
+
+	Persona.prototype.nombre = "Nada";
+	console.log(persona1.decirNombre());
+	console.log(persona2.decirNombre());
+
+
+	// ---------------------------HERENCIA-----------------------------
+
+	var jedi1 = new Persona("Obi Wan", 45);
+	console.log( jedi1.decirNombre());
+
+	// Yo soy el prototipo de mi hijo
+	function Jedi(nombre, edad, fuerza) {
+		Persona.call(this, nombre, edad);
+		this.fuerza = fuerza;
+	}
+
+
+	// Crear un jedi a partir de un nuevo constructor que llama
+	// al constructor de la superclase
+
+	var jedi1 = new Jedi("Obi Wan", 45, 40);
+
+	// ------------------------------------------------------------
+
+	function Sith(nombre, edad, ladoOscuro) {
+		Persona.call(this, nombre, edad);
+		this.ladoOscuro = ladoOscuro;
+	}
+
+	Sith.prototype = Object.create(Persona.prototype);
+
+	var sith1 = new Sith("Obi Wan", 45, 85);
+	sith1.cambiarNombre("Obi Wan");
+	console.log( sith1.decirNombre());
+
+</script>
