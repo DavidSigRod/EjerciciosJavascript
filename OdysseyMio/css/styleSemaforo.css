@@ -1,0 +1,65 @@
+
+
+.wrapper {
+	width: 500px;
+	margin: 0 auto;
+
+}
+
+body {
+	background-color: grey;
+}
+
+.cuerpo {
+	width: 300px;
+	height: 600px;
+	background-color: black;
+	border-radius: 30px;
+	float:left;
+	text-align: center;
+
+}
+
+.luz{
+	width: 160px;
+	height: 160px;
+	border-radius: 160px;
+	margin-left: 24%;
+	margin-top: 10%;
+
+
+
+}
+
+.apagado{
+	background-color: grey;
+}
+
+.rojo{
+	background-color: red; 
+	
+	
+}
+
+.ambar{
+ 	background-color: orange; 
+	
+	
+}
+
+.verde{
+    background-color: green; 
+	
+	
+}
+
+.boton{
+	width: 150px;
+	height: 80px;
+	position: fixed;
+	top:70px;
+	right: 30%;
+	background-color: darkgreen;
+	border-radius: 20px;
+	border-color: black;
+}

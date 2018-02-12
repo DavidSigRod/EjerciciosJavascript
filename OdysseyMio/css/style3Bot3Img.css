@@ -1,0 +1,47 @@
+
+.wrapper {
+	width: 500px;
+	margin:0 auto;
+}
+
+body {
+	background-color: grey;
+}
+
+.cuerpo {
+	width: 100%;
+	float: left;
+
+}
+
+.cuerpo img {
+	max-width: 100%;
+}
+
+.botones {
+
+	width: 100%;
+	float: left;
+
+
+}
+
+.boton{
+	width: 31%;
+	float: left;
+	background-color: black;
+	border-radius: 25px;
+	text-align: center;
+	color: white;
+	margin: 1%;
+	border-radius: 20px;
+	border-color: white;
+}
+
+.visible {
+	display: inline;
+}
+
+.noVisible{
+	display:none;
+}
